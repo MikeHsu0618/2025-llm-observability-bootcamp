@@ -90,7 +90,7 @@ docker compose -f grafana/docker-compose.yaml pull
 
 ```bash
 # 複製專案
-git clone https://github.com/your-repo/2025-llm-observability-bootcamp.git
+git clone https://github.com/Mikehsu0618/2025-llm-observability-bootcamp.git
 cd 2025-llm-observability-bootcamp
 
 # 設定 ADK 環境變數
