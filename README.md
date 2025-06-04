@@ -1,5 +1,4 @@
 # 2025 LLM Observability Bootcamp
-2025 DevOpsDays Taipei LLM Observability Bootcamp
 
 歡迎參加 2025 DevOpsDays Taipei LLM 可觀測性 Bootcamp！
 
