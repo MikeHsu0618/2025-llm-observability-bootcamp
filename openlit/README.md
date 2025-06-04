@@ -31,7 +31,7 @@ graph LR
 
 ```bash
 # 檢查服務狀態
-docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+docker ps"
 ```
 
 應該看到以下服務正在執行：
