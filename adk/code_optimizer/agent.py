@@ -1,10 +1,9 @@
-# 匯入必要的函式庫
-from google.adk.agents.sequential_agent import SequentialAgent  # 匯入循序代理
-from google.adk.agents import Agent  # 匯入基礎代理類別
-from google.genai import types  # 匯入型別定義
-from google.adk.sessions import InMemorySessionService  # 匯入記憶體會話服務
-from google.adk.runners import Runner  # 匯入執行器
-from google.adk.tools import FunctionTool  # 匯入函式工具，用於建立自訂工具
+from google.adk.agents.sequential_agent import SequentialAgent
+from google.adk.agents import Agent
+from google.genai import types
+from google.adk.sessions import InMemorySessionService 
+from google.adk.runners import Runner
+from google.adk.tools import FunctionTool
 import openlit
 import os
 

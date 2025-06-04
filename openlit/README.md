@@ -99,6 +99,10 @@ docker ps"
 
 ![openlit-evaluations.png](./images/openlit-evaluations.png)
 
+設定 LLM Provider 和指定模型：
+
+![llm-provider.png](./images/llm-provider.png)
+
 體驗 OpenLIT 的內建 LLM 評估工具：
 
 - **品質評估**: 自動評估 LLM 回應的品質
