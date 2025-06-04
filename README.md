@@ -80,7 +80,7 @@ docker compose -f grafana/docker-compose.yaml pull
 
 ```bash
 # 複製專案
-git clone https://github.com/Mikehsu0618/2025-llm-observability-bootcamp.git
+git clone https://github.com/MikeHsu0618/2025-llm-observability-bootcamp.git
 cd 2025-llm-observability-bootcamp
 
 # 設定 ADK 環境變數
@@ -98,23 +98,6 @@ cd ../..  # 回到根目錄
 docker compose -f openlit/docker-compose.yaml up -d
 docker compose -f adk/docker-compose.yaml up -d  
 docker compose -f grafana/docker-compose.yaml up -d
-```
-
-## ⚡ 快速啟動
-
-如果您已完成前置準備並設定好 ADK 的 .env 檔案，可以一鍵啟動所有服務：
-
-```bash
-# 啟動所有服務（順序重要）
-docker compose -f openlit/docker-compose.yaml up -d
-docker compose -f adk/docker-compose.yaml up -d
-docker compose -f grafana/docker-compose.yaml up -d
-
-# 等待服務啟動（約30秒）
-sleep 30
-
-# 檢查服務狀態
-docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 ```
 
 ### 🌐 服務位址
