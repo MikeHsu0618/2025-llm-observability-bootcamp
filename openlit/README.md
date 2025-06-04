@@ -48,7 +48,7 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 2. 選擇任一代理（Code Optimizer 或 Multi Tool Agent）
 3. 進行幾次對話互動來產生 LLM 呼叫資料
 
-### 3. 存取 OpenLIT 儀表板
+### 3. 進入 OpenLIT 登入畫面
 
 ![login.png](./images/login.png)
 
