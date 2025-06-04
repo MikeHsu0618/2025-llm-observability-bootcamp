@@ -1,6 +1,6 @@
-# Google ADK (Agent Development Kit) Workshop
+# Google ADK (Agent Development Kit)
 
-歡迎參加 ADK 工作坊！此目錄包含兩個範例，旨在幫助您快速上手 Google ADK，並了解其在代理編排和函式呼叫方面的核心功能。
+此目錄包含兩個範例，旨在幫助您快速上手 Google ADK，並了解其在代理編排和函式呼叫方面的核心功能。
 
 ## 目錄結構
 
@@ -17,7 +17,26 @@ adk/
 
 ## 範例概覽
 
-### 1. 程式碼優化器 (`code_optimizer`)
+### 1. 多工具代理 (`multi_tool_agent`)
+
+此範例展示了如何建構一個能夠使用多個自訂工具 (Python 函式) 的代理。它演示了 ADK 如何使大型語言模型 (LLM) 能夠根據使用者請求，智慧地選擇並執行合適的函式，並利用函式回傳結果來產生回應。
+
+**函式呼叫流程:**
+
+```mermaid
+graph TD
+    User["User Request"] --> Agent{"weather_time_agent"}
+    Agent -- "Chooses Tool" --> Tool["Identifies get_weather OR get_current_time"]
+    Tool -- "Executes" --> PythonFunction["Python: get_weather() / get_current_time()"]
+    PythonFunction -- "Returns Result" --> Agent
+    Agent -- "Generates Response" --> LLM_Response["LLM Formats Final Response"]
+    LLM_Response --> UserOutput["Output to User"]
+```
+
+詳細說明請參閱 [`adk/multi_tool_agent/README.md`](./multi_tool_agent/README.md)。
+
+
+### 2. 程式碼優化器 (`code_optimizer`)
 
 此範例展示了如何使用 ADK 建構一個多步驟的程式碼處理管線，模擬了程式碼撰寫、審查和重構的流程。它突顯了 ADK `SequentialAgent` 在編排多個子代理依序執行方面的能力。
 
@@ -38,24 +57,6 @@ graph TD
 ```
 
 詳細說明請參閱 [`adk/code_optimizer/README.md`](./code_optimizer/README.md)。
-
-### 2. 多工具代理 (`multi_tool_agent`)
-
-此範例展示了如何建構一個能夠使用多個自訂工具 (Python 函式) 的代理。它演示了 ADK 如何使大型語言模型 (LLM) 能夠根據使用者請求，智慧地選擇並執行合適的函式，並利用函式回傳結果來產生回應。
-
-**函式呼叫流程:**
-
-```mermaid
-graph TD
-    User["User Request"] --> Agent{"weather_time_agent"}
-    Agent -- "Chooses Tool" --> Tool["Identifies get_weather OR get_current_time"]
-    Tool -- "Executes" --> PythonFunction["Python: get_weather() / get_current_time()"]
-    PythonFunction -- "Returns Result" --> Agent
-    Agent -- "Generates Response" --> LLM_Response["LLM Formats Final Response"]
-    LLM_Response --> UserOutput["Output to User"]
-```
-
-詳細說明請參閱 [`adk/multi_tool_agent/README.md`](./multi_tool_agent/README.md)。
 
 ## 開始使用
 
