@@ -42,8 +42,6 @@ graph TD
 4. **OpenLIT 後端** 查詢 ClickHouse 提供專業的 LLM 可觀測性儀表板
 5. **Grafana** 查詢 Prometheus 和 Tempo 提供通用的監控儀表板
 
-> 💡 這種架構設計讓您同時體驗**專業 LLM 可觀測性工具** (OpenLIT) 和**傳統 APM 工具** (Grafana) 的整合效果！
-
 ## 🚀 前置準備作業
 
 ### 1. 環境需求
@@ -147,7 +145,7 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 
 🎯 **目標**: 收集 LLM 應用程式的遙測數據，了解 OpenTelemetry 標準
 
-![openlit-dashboard.png](openlit-dashboard.png)
+![openlit-dashboard.png](./images/openlit-dashboard.png)
 
 **前往**: [`openlit/`](./openlit/README.md)
 
