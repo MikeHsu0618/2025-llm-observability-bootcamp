@@ -12,9 +12,6 @@ RUN pip install --no-cache-dir openlit
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define environment variable
-ENV NAME World
-
 # Run the ADK Web UI when the container launches
 # We use --host 0.0.0.0 to make it accessible outside the container.
-CMD ["adk", "web", "--port", "8000"] 
+CMD ["adk", "web", "--host", "0.0.0.0", "--port", "8000"]
