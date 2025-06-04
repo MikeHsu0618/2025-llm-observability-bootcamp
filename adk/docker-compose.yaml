@@ -1,0 +1,9 @@
+services:
+  adk:
+    build: .
+    environment:
+      OTEL_RESOURCE_ATTRIBUTES: "service.name=google-adk"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
