@@ -11,13 +11,11 @@ graph LR
     C --> F[OpenLIT]
 ```
 
-OpenLIT 在此架構中負責：
-- 自動收集來自 ADK 應用程式的 LLM 遙測資料
-- 運行 OpenTelemetry Collector 處理遙測資料
-- 管理 ClickHouse 資料庫儲存完整的追蹤資料
-- 將指標資料分發到 Prometheus 
-- 將追蹤資料分發到 Tempo
-- 提供專業的 LLM 可觀測性儀表板
+各組件在此架構中的角色：
+- **OpenLIT SDK**: 在 ADK 應用程式中自動收集 LLM 遙測資料
+- **OpenTelemetry Collector**: 接收、處理和轉發遙測資料
+- **ClickHouse**: 儲存完整的追蹤和指標資料
+- **OpenLIT Web UI**: 提供專業的 LLM 可觀測性儀表板和分析功能
 
 ## 🎯 本階段目標
 
