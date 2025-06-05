@@ -70,6 +70,10 @@ graph TD
 為了節省時間，您可以預先下載鏡像（或直接跳過此步驟，Docker Compose 會自動下載）：
 
 ```bash
+# 複製專案
+git clone https://github.com/MikeHsu0618/2025-llm-observability-bootcamp.git
+cd 2025-llm-observability-bootcamp
+
 # 可選：預先下載鏡像以節省啟動時間
 docker compose -f adk/docker-compose.yaml pull
 docker compose -f openlit/docker-compose.yaml pull  
