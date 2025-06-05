@@ -75,7 +75,7 @@ git clone https://github.com/MikeHsu0618/2025-llm-observability-bootcamp.git
 cd 2025-llm-observability-bootcamp
 
 # 可選：預先下載鏡像以節省啟動時間
-docker compose -f adk/docker-compose.yaml pull
+docker compose -f adk/docker-compose.yaml build
 docker compose -f openlit/docker-compose.yaml pull  
 docker compose -f grafana/docker-compose.yaml pull
 ```
